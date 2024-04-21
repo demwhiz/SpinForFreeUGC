@@ -1,0 +1,48 @@
+GameName = "Spin For Free UGC" 
+
+tab1name = "Main" 
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))() 
+
+local GameName = Library:NewWindow(GameName) 
+
+local Tab1 = GameName:NewSection(tab1name) 
+
+Tab1:CreateToggle("Auto Spin", function(value)
+_G.name = value
+while _G.name == true do
+_G.Loop = true
+while _G.Loop and task.wait() do
+game:GetService("ReplicatedStorage").CanSpin:FireServer()
+end
+wait(5) 
+end
+end) 
+
+Tab1:CreateButton("2x Luck", function(value)
+game.Players.LocalPlayer.Character:PivotTo(CFrame.new(-2124.39087, 173.79187, -41.5097847, 0.0851787478, -0.606576502, 0.790448964, 6.14725426e-09, 0.79333216, 0.608789027, -0.996365666, -0.0518558808, 0.0675750449))
+end)
+local Tab2 = GameName:NewSection("Misc") 
+
+Tab2:CreateButton("Anti Afk", function(value)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KazeOnTop/Rice-Anti-Afk/main/Wind", true))()
+end) 
+
+Tab2:CreateButton("ServerHop", function(value)
+loadstring(game:HttpGet("https://pastebin.com/raw/1gtVMUz3"))()
+end)
+local Tab2 = GameName:NewSection("justrinn")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
